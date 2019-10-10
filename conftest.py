@@ -18,6 +18,7 @@ def load_config(file):
             target = json.load(f)
     return target
 
+
 @pytest.fixture(scope="session")
 def config(request):
     return load_config(request.config.getoption("--target"))
